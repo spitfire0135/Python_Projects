@@ -1,0 +1,59 @@
+""" this works with any positive integer of any digit. 
+    WILL NOT WORK WITH FLOATS...AT THE MOMENT."""
+"""
+<iframe src="https://trinket.io/embed/python/009cccbe0c" width="100%" height="400" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+"""
+def spaces(x):
+  total = 0
+  if x < 10:
+  	if x == 1:
+		  print 0
+  	elif x == 2:
+	  	print 0
+  	elif x == 3:
+	  	print 0
+	elif x == 4:
+	  	print 1
+	elif x == 5:
+	  	print 0
+  	elif x == 6:
+	  	print 1
+	elif x == 7:
+  		print 0
+  	elif x == 8:
+	  	print 2
+	elif x == 9:
+	  	print 1
+	elif x == 0:
+	  	print 1
+	else:
+		  "Error"
+  if x >= 10:
+    a = str(x)
+    for b in a:
+      c = int(b)
+      if c == 1:
+        total = total + 0
+      elif c == 2:
+         total = total + 0
+      elif c == 3:
+        total = total + 0
+      elif c == 4:
+        total = total + 1
+      elif c == 5:
+        total = total + 0
+      elif c == 6:
+        total = total + 1
+      elif c == 7:
+        total = total + 0
+      elif c == 8:
+        total = total + 2
+      elif c == 9:
+        total = total + 1
+      elif c == 0:
+        total = total + 1
+    print total
+""" First: input any positive number you want in the paranthesis below
+    Next: run the code to determine the spaces within the number 
+    (i.e. 1= 0 spaces, 4= 1 space, 8= 2 spaces, etc)"""
+spaces(raw_input("Give me a number: ")
