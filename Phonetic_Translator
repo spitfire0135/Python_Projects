@@ -1,0 +1,91 @@
+# phonetic converter
+#
+def phonetic(word):
+	code = [] #phonetic code list
+	for ll in word:
+		if ll == 'A'or ll == 'a':
+			code.append('Alpha')
+		elif ll == 'B' or ll == 'b': 
+			code.append('Bravo')
+		elif ll == 'C' or ll == 'c':
+			code.append('Charlie')
+		elif ll == 'D' or ll == 'd':
+			code.append('Delta')
+		elif ll == 'E' or ll == 'e':
+			code.append('Echo')
+		elif ll == 'F' or ll == 'f':
+			code.append('Foxtrot')
+		elif ll == 'G' or ll == 'g':
+			code.append('Gulf')
+		elif ll == 'H' or ll == 'h':
+			code.append('Hotel')
+		elif ll == 'I' or ll == 'i':
+			code.append('India')
+		elif ll == 'J' or ll == 'j':
+			code.append('Juliet')
+		elif ll == 'K' or ll == 'k':
+			code.append('Kilo')
+		elif ll == 'L' or ll == 'l':
+			code.append('Lima')
+		elif ll == 'M' or ll == 'm':
+			code.append('Mike')
+		elif ll == 'N' or ll == 'n':
+			code.append('November')
+		elif ll == 'O' or ll == 'o':
+			code.append('Oscar')
+		elif ll == 'P' or ll == 'p':
+			code.append('PaPa')
+		elif ll == 'Q' or ll == 'q':
+			code.append('Quebec')
+		elif ll == 'R' or ll == 'r':
+			code.append('Romeo')
+		elif ll == 'S' or ll == 's':
+			code.append('Sierra')
+		elif ll == 'T' or ll == 't':
+			code.append('Tango')
+		elif ll == 'U' or ll == 'u':
+			code.append('Uniform')
+		elif ll == 'V' or ll == 'v':
+			code.append('Victor')
+		elif ll == 'W' or ll == 'w':
+			code.append('Whiskey')
+		elif ll == 'X' or ll == 'x':
+			code.append('X-Ray')
+		elif ll == 'Y' or ll == 'y':
+			code.append('Yankee')
+		elif ll == 'Z' or ll == 'z':
+			code.append('Zulu')
+		elif ll == '1':
+			code.append('One')
+		elif ll == '2':
+			code.append('Two')
+		elif ll == '3':
+			code.append('Tree')
+		elif ll == '4':
+			code.append('Fower')
+		elif ll == '5':
+			code.append('Fife')
+		elif ll == '6':
+			code.append('Six')
+		elif ll == '7':
+			code.append('Seven')
+		elif ll == '8':
+			code.append('Eight')
+		elif ll == '9':
+			code.append('Niner')
+		elif ll == '0':
+			code.append('Zero')
+		elif ll == ' ':
+			code.append(' ')
+		elif ll == '.':
+			code.append(' BREAK')
+		elif ll == ',':
+			code.append(', ')
+		elif ll == '!':
+		  code.append('!')
+		elif ll == "'":
+		  code.append("'")
+		elif ll == '?':
+		  code.append('?')
+	for xx in code: print xx,
+phonetic(raw_input("Word or phrase"))
