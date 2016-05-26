@@ -1,0 +1,112 @@
+# binary converter
+# still need to make it reversible from binary to english...
+def binary(word):
+	code = [] #binary code list
+	for ll in word:
+		if ll == 'a': 
+			code.append('01100001')
+		elif ll == 'A':
+			code.append('01000001')
+		elif ll == 'b':
+			code.append('01100010')
+		elif ll == 'B':
+			code.append('01000010')
+		elif ll == 'c':
+			code.append('01100011')
+		elif ll == 'C':
+			code.append('01000011')
+		elif ll == 'd':
+			code.append('01100100')
+		elif ll == 'D':
+			code.append('01000100')
+		elif ll == 'e':
+			code.append('01100101')
+		elif ll == 'E':
+			code.append('01000101')
+		elif ll == 'f':
+			code.append('01100110')
+		elif ll == 'F':
+			code.append('01000110')
+		elif ll == 'g':
+			code.append('01100111')
+		elif ll == 'G':
+			code.append('01000111')
+		elif ll == 'h':
+			code.append('01101000')
+		elif ll == 'H':
+			code.append('01001000')
+		elif ll == 'i':
+			code.append('01101001')
+		elif ll == 'I':
+			code.append('01001001')
+		elif ll == 'j':
+			code.append('01101010')
+		elif ll == 'J':
+			code.append('01001010')
+		elif ll == 'k':
+			code.append('01101011')
+		elif ll == 'K':
+			code.append('01001011')
+		elif ll == 'l':
+			code.append('01101100')
+		elif ll == 'L':
+			code.append('01001100')
+		elif ll == 'm':
+			code.append('01101101')
+		elif ll == 'M':
+			code.append('01001101')
+		elif ll == 'n':
+			code.append('01101110')
+		elif ll == 'N':
+			code.append('01001110')
+		elif ll == 'o':
+			code.append('01101111')
+		elif ll == 'O':
+			code.append('01001111')
+		elif ll == 'p':
+			code.append('01110000')
+		elif ll == 'P':
+			code.append('01010000')
+		elif ll == 'q':
+			code.append('01110001')
+		elif ll == 'Q':
+			code.append('01010001')
+		elif ll == 'r':
+			code.append('01110010')
+		elif ll == 'R':
+			code.append('01010010')
+		elif ll == 's':
+			code.append('01110011')
+		elif ll == 'S':
+			code.append('01010011')
+		elif ll == 't':
+			code.append('01110100')
+		elif ll == 'T':
+			code.append('01010100')
+		elif ll == 'u':
+			code.append('01110101')
+		elif ll == 'U':
+			code.append('01010101')
+		elif ll == 'v':
+			code.append('01110110')
+		elif ll == 'V':
+			code.append('01010110')
+		elif ll == 'w':
+			code.append('01110111')
+		elif ll == 'W':
+			code.append('01010111')
+		elif ll == 'x':
+			code.append('01111000')
+		elif ll == 'X':
+			code.append('01011000')
+		elif ll == 'y':
+			code.append('01111001')
+		elif ll == 'Y':
+			code.append('01011001')
+		elif ll == 'z':
+			code.append('01111010')
+		elif ll == 'Z':
+			code.append('01011010')
+	for x in code: print x,
+
+binary(raw_input("Word or Phrase"))
