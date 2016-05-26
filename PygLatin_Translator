@@ -1,0 +1,15 @@
+#pig latin translator, via codecademy.com
+
+pyg = 'ay'
+
+original = raw_input('Enter a word:')
+
+if len(original) > 0 and original.isalpha(): # .isalpha() = word is alphabet and not a number or symbol.
+    print original
+    word = original.lower()
+    first = word[0]
+    new_word = word + first + pyg
+    new_word = word[1:len(new_word)] + first + pyg # [1:len(new_word)] = a span between the first and the length of the word.
+else:
+    print 'empty'
+print new_word
