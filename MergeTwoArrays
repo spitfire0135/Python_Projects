@@ -1,9 +1,5 @@
 #
 #
-#
-#	this freaking easy...wow.
-#
-#
 def mergeArray(a, b):
   c = a + b
   c.sort()
