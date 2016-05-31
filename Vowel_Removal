@@ -1,0 +1,8 @@
+def anti_vowel(text):
+    word = []
+    for l in text:
+        if l not in "aeiouAEIOU":
+            word.append(l)
+    print "".join(word)
+                
+anti_vowel(raw_input("word"))
