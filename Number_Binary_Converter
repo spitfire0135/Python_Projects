@@ -1,0 +1,7 @@
+#
+# Number binary converter
+#
+x = raw_input("Number?")
+	y = int(x)
+	print bin(y)
+	
