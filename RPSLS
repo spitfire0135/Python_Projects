@@ -1,0 +1,294 @@
+# has a minor error of keeping score...won't add points to either player resulting in the end of game (best 2 of 3 matches....) but plays just fine otherwise.
+#
+# <iframe src="https://trinket.io/embed/python/3f753d770e" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+#
+print " "
+print ">>>  ROCK  <<<>>>  PAPER  <<<>>>  SCISSORS  <<<>>>  LIZARD  <<<>>>  SPOCK  <<<"
+print " "
+print "???  Best 2 / 3  ???"
+print " "
+print "Scissors cuts Paper."
+print "Paper covers Rock."
+print "Rock crushes Lizard."
+print "Lizard poisons Spock."
+print "Spock smashes Scissors."
+print "Scissors decapitates Lizard."
+print "Lizard eats Paper."
+print "Paper disproves Spock."
+print "Spock vaporizes Rock."
+print "And as it always has, Rock crushes Scissors"
+print " "
+#
+import random
+#
+def score(x):
+	player1 = 0
+	comp = 0
+	plscore = "Player 1:", player1 # I NEED TO MODIFY SCORE() AND INSERT THAT FUNCTION INTO THE RPSLS() CODE SO THAT I CAN INCREMENT THE SCORE AND DETEREMINE A WINNER. 
+	compscore = "Computer:", comp
+	if x == True:
+		player1 = player1 + 1
+		print '<><>  The current score is:  <><>'
+		print ' <><>  ',plscore,'  <><>'
+		print ' <><>  ',compscore,'  <><>'
+		if player1 >= 2 or comp >= 2:
+			if player1 > comp:
+				print 'Player 1 WINS the game!!!'
+				print 'That was a good game!'
+				print 'The ending score was: '
+				print '<><><>  ',plscore
+				print '<><><>  ',compscoree
+			elif player < comp:
+				print 'Player 1 LOSES the game...'
+				print 'That was a good game!'
+				print 'The ending score was: '
+				print '<><><>  ',plscore
+				print '<><><>  ',compscore
+	elif x == False:
+		comp = comp + 1
+		print '<><>  The current score is:  <><>'
+		print ' <><>  ',plscore,'  <><>'
+		print ' <><>  ',compscore,'  <><>'
+		if player1 >= 2 or comp >= 2:
+			if player1 > comp:
+				print 'Player 1 WINS the game!!!'
+				print 'That was a good game!'
+				print 'The ending score was: '
+				print '<><><>  ',plscore
+				print '<><><>  ',compscore
+			elif player < comp:
+				print 'Player 1 LOSES the game...'
+				print 'That was a good game!'
+				print 'The ending score was: '
+				print '<><><>  ',plscore
+				print '<><><>  ',compscore	
+	else:
+		print '<><><>  The current score is: '
+		print '<><><>  ',plscore
+		print '<><><>  ',compscore
+		rpsls()
+	return player1
+	return comp
+#
+def playAgain():
+	print 'Do you want to play again?'
+	x = raw_input('Y or N')
+	if x == 'y' or x == 'Y':
+		rpsls()
+	else:
+	  print ' '
+	  print 'That was a good game.'
+#
+def rpsls():
+  computer = random.randint(1,100)
+  x = raw_input("Guess?")
+  print ' '
+  player = x.upper()
+  if computer <= 20:
+		print 'Computer chose: ROCK'
+		if player == 'ROCK':
+			print 'Player 1 chose: ',player
+			print 'It\'s a Draw! Guess Again!'
+			print ' '
+			score(x)
+			print ' '
+			playAgain()
+		elif player == 'PAPER':
+			print 'Player 1 chose: ',player
+			print 'PAPER COVERS ROCK'
+			print 'Player 1 wins this round!'
+			print ' '
+			score(True)
+			print ' '
+			playAgain()
+		elif  player == 'SPOCK':
+			print 'Player 1 chose: ',player
+			print 'SPOCK VAPORIZES ROCK'
+			print 'Player 1 wins this round!'
+			print ' '
+			score(True)
+			print ' '
+			playAgain()
+		elif player == 'SCISSORS':
+			print 'Player 1 chose: ',player
+			print 'ROCK CRUSHES SCISSORS'
+			print 'Player 1 loses this round...'
+			print ' '
+			score(False)
+			print ' '
+			playAgain()
+		elif player == 'LIZARD':
+			print 'Player 1 chose: ',player
+			print 'ROCK CRUSHES LIZARD'
+			print 'Player 1 loses this round...'
+			print ' '
+			score(False)
+			print ' '
+			playAgain()
+  elif computer <= 40:
+		print 'Computer chose: PAPER'
+		if player == 'PAPER':
+			print 'Player 1 chose: ',player
+			print 'It\'s a Draw! Guess Again!'
+			print ' '
+			score(x)
+			print ' '
+			playAgain()
+		elif player == 'SCISSORS':
+			print 'Player 1 chose: ',player
+			print 'SCISSORS CUTS PAPER'
+			print 'Player 1 wins this round!'
+			print ' '
+			score(True)
+			print ' '
+			playAgain()
+		elif player == 'LIZARD':
+			print 'Player 1 chose: ',player
+			print 'LIZARD EATS PAPER'
+			print 'Player 1 wins this round!'
+			print ' '
+			score(True)
+			print ' '
+			playAgain()
+		elif player == 'ROCK':
+			print 'Player 1 chose: ',player
+			print 'PAPER COVERS ROCK'
+			print 'Player 1 loses this round...'
+			print ' '
+			score(False)
+			print ' '
+			playAgain()
+		elif player == 'SPOCK':
+			print 'Player 1 chose: ',player
+			print 'PAPER DISPROVES SPOCK'
+			print 'Player 1 loses this round...'
+			print ' '
+			score(False)
+			print ' '
+			playAgain()
+  elif computer <= 60:
+		print 'Computer chose: SCISSORS'
+		if player == 'SCISSORS':
+			print 'Player 1 chose: ',player
+			print 'It\'s a Draw! Guess Again!'
+			print ' '
+			score(x)
+			print ' '
+			playAgain()
+		elif player == 'ROCK':
+			print 'Player 1 chose: ',player
+			print 'AS IT ALWAYS HAS, ROCK CRUSHES SCISSORS'
+			print 'Player 1 wins this round!'
+			print ' '
+			score(True)
+			print ' '
+			playAgain()
+		elif player == 'SPOCK':
+			print 'Player 1 chose: ',player
+			print 'SPOCK VAPORIZES SCISSORS'
+			print 'Player 1 wins this round!'
+			print ' '
+			score(True)
+			print ' '
+			playAgain()
+		elif player == 'LIZARD':
+			print 'Player 1 chose: ',player
+			print 'SCISSORS DECAPITATES LIZARD'
+			print 'Player 1 loses this round...'
+			print ' '
+			score(False)
+			print ' '
+			playAgain()
+		elif player == 'PAPER':
+			print 'Player 1 chose: ',player
+			print 'SCISSORS CUTS PAPER'
+			print 'Player 1 loses this round...'
+			print ' '
+			score(False)
+			print ' '
+			playAgain()
+  elif computer <= 80:
+		print 'Computer chose: LIZARD'
+		if player == 'LIZARD':
+			print 'Player 1 chose: ',player
+			print 'It\'s a Draw! Guess Again!'
+			print ' '
+			score(x)
+			print ' '
+			playAgain()
+		elif player == 'SCISSORS':
+			print 'Player 1 chose: ',player
+			print 'SCISSORS DECAPITATES LIZARD'
+			print 'Player 1 wins this round!'
+			print ' '
+			score(True)
+			print ' '
+			playAgain()
+		elif player == 'ROCK':
+			print 'Player 1 chose: ',player
+			print 'ROCK CRUSHES LIZARD'
+			print 'Player 1 wins this round!'
+			print ' '
+			score(True)
+			print ' '
+			playAgain()
+		elif player == 'PAPER':
+			print 'Player 1 chose: ',player
+			print 'PAPER COVERS ROCK'
+			print 'Player 1 loses this round...'
+			print ' '
+			score(False)
+			print ' '
+			playAgain()
+		elif player == 'SPOCK':
+			print 'Player 1 chose: ',player
+			print 'LIZARD POISONS SPOCK'
+			print 'Player 1 loses this round...'
+			print ' '
+			score(False)
+			print ' '
+			playAgain()
+  elif computer <= 100:
+		print 'Computer chose: SPOCK'
+		if player == 'SPOCK':
+			print 'Player 1 chose: ',player
+			print 'It\'s a Draw! Guess Again!'
+			print ' '
+			score(x)
+			print ' '
+			playAgain()
+		elif player == 'PAPER':
+			print 'Player 1 chose: ',player
+			print 'PAPER DISPROVES SPOCK'
+			print 'Player 1 wins this round!'
+			print ' '
+			score(True)
+			print ' '
+			playAgain()
+		elif player == 'LIZARD':
+			print 'Player 1 chose: ',player
+			print 'LIZARD POISONS SPOCK'
+			print 'Player 1 wins this round!'
+			print ' '
+			score(True)
+			print ' '
+			playAgain()
+		elif player == 'SCISSORS':
+			print 'Player 1 chose: ',player
+			print 'SPOCK SMASHES SCISSORS'
+			print 'Player 1 loses this round...'
+			print ' '
+			score(False)
+			print ' '
+			playAgain()
+		elif player == 'ROCK':
+			print 'Player 1 chose: ',player
+			print 'SPOCK VAPORIZES ROCK'
+			print 'Player 1 loses this round...'
+			print ' '
+			score(False)
+			print ' '
+			playAgain()
+rpsls()
+#
+  
