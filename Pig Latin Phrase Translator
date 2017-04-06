@@ -1,0 +1,14 @@
+def pigTalk(text):
+  print '"' + text + '"' + " becomes:"
+  print ' '
+  pyg = 'ay'
+  a = []
+    for word in text.split():
+      if word.isalpha():
+        first = word[0]
+        rest = word[1:]
+        a.append(rest + first + pyg)
+      elif word.isalpha() is False:
+        a.append(word)
+  print ' '.join(a)
+pigTalk(raw_input())
