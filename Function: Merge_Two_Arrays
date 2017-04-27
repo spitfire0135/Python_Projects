@@ -6,3 +6,4 @@ def mergeArray(a, b):
   print c
   
 # mergeArray([22, 4, 8], [500, 3]) returns a new array(c) as [3,4,8,22,500]
+# can be modified to combine anything (int(), str(), etc.)
