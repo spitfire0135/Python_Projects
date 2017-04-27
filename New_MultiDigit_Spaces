@@ -1,0 +1,12 @@
+def spaces(number):
+  a = []
+  total = 0
+  num = { '1':0, '2':0, '3':0, '4':1, '5':0,\
+          '6':1, '7':0, '8':2, '9':1, '0':1, }
+  for i in str(number):
+    if str(i) in num:
+      a.append(num[i])
+  for x in a:
+    total += int(x)
+  print total
+spaces(int(raw_input()))
