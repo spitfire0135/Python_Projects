@@ -1,0 +1,181 @@
+"""
+board = [[0,0,0,0,0,0,0,0,0],
+         [0,0,0,0,0,0,0,0,0],
+         [0,0,0,0,0,0,0,0,0],
+         [0,0,0,0,0,0,0,0,0],
+         [0,0,0,0,0,0,0,0,0],
+         [0,0,0,0,0,0,0,0,0],
+         [0,0,0,0,0,0,0,0,0],
+         [0,0,0,0,0,0,0,0,0],
+         [0,0,0,0,0,0,0,0,0]]
+"""         
+board = [[5, 3, 4, 6, 7, 8, 9, 1, 2], 
+         [6, 7, 2, 1, 9, 5, 3, 4, 8],
+         [1, 9, 8, 3, 4, 2, 5, 6, 7],
+         [8, 5, 9, 7, 6, 1, 4, 2, 3],
+         [4, 2, 6, 8, 5, 3, 7, 9, 1],
+         [7, 1, 3, 9, 2, 4, 8, 5, 6],
+         [9, 6, 1, 5, 3, 7, 2, 8, 4],
+         [2, 8, 7, 4, 1, 9, 6, 3, 5],
+         [3, 4, 5, 2, 8, 6, 1, 7, 9]]
+         
+def print_board():
+  print ''
+  print '  -------GAME BOARD-------'
+  for row in board:
+    print ''.join(str(row))
+  print ''
+  
+grid1 = board[0][0],board[0][1],board[0][2],\
+        board[1][0],board[1][1],board[1][2],\
+        board[2][0],board[2][1],board[2][2]
+        
+grid2 = board[0][3],board[0][4],board[0][5],\
+        board[1][3],board[1][4],board[1][5],\
+        board[2][3],board[2][4],board[2][5]
+  
+grid3 = board[0][6],board[0][7],board[0][8],\
+        board[1][6],board[1][7],board[1][8],\
+        board[2][6],board[2][7],board[2][8]
+         
+grid4 = board[3][0],board[3][1],board[3][2],\
+        board[4][0],board[4][1],board[4][2],\
+        board[5][0],board[5][1],board[5][2]
+         
+grid5 = board[3][3],board[3][4],board[3][5],\
+        board[4][3],board[4][4],board[4][5],\
+        board[5][3],board[5][4],board[5][5]
+        
+grid6 = board[3][6],board[3][7],board[3][8],\
+        board[4][6],board[4][7],board[4][8],\
+        board[5][6],board[5][7],board[5][8]
+　
+grid7 = board[6][0],board[6][1],board[6][2],\
+        board[7][0],board[7][1],board[7][2],\
+        board[8][0],board[8][1],board[8][2]
+         
+grid8 = board[6][3],board[6][4],board[6][5],\
+        board[7][3],board[7][4],board[7][5],\
+        board[8][3],board[8][4],board[8][5]
+        
+grid9 = board[6][6],board[6][7],board[6][8],\
+        board[7][6],board[7][7],board[7][8],\
+        board[8][6],board[8][7],board[8][8]
+　
+subGrids = grid1, grid2, grid3, grid4, grid5, grid6, grid7, grid8, grid9
+　
+#///////////////////////////////////////////////////////////
+　
+row1 = board[0][0],board[0][1],board[0][2],\
+       board[0][3],board[0][4],board[0][5],\
+       board[0][6],board[0][7],board[0][8]
+       
+row2 = board[1][0],board[1][1],board[1][2],\
+       board[1][3],board[1][4],board[1][5],\
+       board[1][6],board[1][7],board[1][8]
+　
+row3 = board[2][0],board[2][1],board[2][2],\
+       board[2][3],board[2][4],board[2][5],\
+       board[2][6],board[2][7],board[2][8]
+　
+row4 = board[3][0],board[3][1],board[3][2],\
+       board[3][3],board[3][4],board[3][5],\
+       board[3][6],board[3][7],board[3][8]
+　
+row5 = board[4][0],board[4][1],board[4][2],\
+       board[4][3],board[4][4],board[4][5],\
+       board[4][6],board[4][7],board[4][8]
+　
+row6 = board[5][0],board[5][1],board[5][2],\
+       board[5][3],board[5][4],board[5][5],\
+       board[5][6],board[5][7],board[5][8]
+　
+row7 = board[6][0],board[6][1],board[6][2],\
+       board[6][3],board[6][4],board[6][5],\
+       board[6][6],board[6][7],board[6][8]
+　
+row8 = board[7][0],board[7][1],board[7][2],\
+       board[7][3],board[7][4],board[7][5],\
+       board[7][6],board[7][7],board[7][8]
+　
+row9 = board[8][0],board[8][1],board[8][2],\
+       board[8][3],board[8][4],board[8][5],\
+       board[8][6],board[8][7],board[8][8]
+　
+rows = row1, row2, row3, row4, row5, row6, row7, row8, row9
+　
+#//////////////////////////////////////////////////////////
+　
+col1 = board[0][0],board[1][0],board[2][0],\
+       board[3][0],board[4][0],board[5][0],\
+       board[6][0],board[7][0],board[8][0]
+       
+col2 = board[0][1],board[1][1],board[2][1],\
+       board[3][1],board[4][1],board[5][1],\
+       board[6][1],board[7][1],board[8][1]
+　
+col3 = board[0][2],board[1][2],board[2][2],\
+       board[3][2],board[4][2],board[5][2],\
+       board[6][2],board[7][2],board[8][2]
+　
+col4 = board[0][3],board[1][3],board[2][3],\
+       board[3][3],board[4][3],board[5][3],\
+       board[6][3],board[7][3],board[8][3]
+　
+col5 = board[0][4],board[1][4],board[2][4],\
+       board[3][4],board[4][4],board[5][4],\
+       board[6][4],board[7][4],board[8][4]
+　
+col6 = board[0][5],board[1][5],board[2][5],\
+       board[3][5],board[4][5],board[5][5],\
+       board[6][5],board[7][5],board[8][5]
+       
+col7 = board[0][6],board[1][6],board[2][6],\
+       board[3][6],board[4][6],board[5][6],\
+       board[6][6],board[7][6],board[8][6]
+　
+col8 = board[0][7],board[1][7],board[2][7],\
+       board[3][7],board[4][7],board[5][7],\
+       board[6][7],board[7][7],board[8][7]
+　
+col9 = board[0][8],board[1][8],board[2][8],\
+       board[3][8],board[4][8],board[5][8],\
+       board[6][8],board[7][8],board[8][8]
+       
+columns = col1, col2, col3, col4, col5, col6, col7, col8, col9
+　
+print_board()
+　
+def check(y): # checks a given 'y' to determin if 1-9 is in it...
+　
+  avail = [1,2,3,4,5,6,7,8,9]
+  
+  while len(avail) > 0:
+    for spot in y:
+      if spot in avail:
+        avail.remove(spot)
+        #print avail
+        
+    if len(avail) > 0:
+      return False
+    else:
+      return True
+      break
+　
+these = [col1, col2, col3, col4, col5, col6, col7, col8, col9,\
+         row1, row2, row3, row4, row5, row6, row7, row8, row9,\
+         grid1, grid2, grid3, grid4, grid5, grid6, grid7, grid8, grid9]
+　
+def checkAll(y):
+  
+  result = []
+  
+  for i in y:
+    result.append(check(i))
+    
+  if False in result:
+    print False
+  else:
+    print True
+    
+checkAll(these)
