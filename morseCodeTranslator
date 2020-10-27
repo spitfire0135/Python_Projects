@@ -1,91 +1,16 @@
-#
-#
-def morse(word):
-	code = []
-	for ll in word:
-		if ll == 'A' or ll == 'a':
-			code.append('o-')
-		elif ll == 'B' or ll == 'b': 
-			code.append('-ooo')
-		elif ll == 'C' or ll == 'c':
-			code.append('-o-o')
-		elif ll == 'D' or ll == 'd':
-			code.append('-oo')
-		elif ll == 'E' or ll == 'e':
-			code.append('o')
-		elif ll == 'F' or ll == 'f':
-			code.append('oo-o')
-		elif ll == 'G' or ll == 'g':
-			code.append('--o')
-		elif ll == 'H' or ll == 'h':
-			code.append('oooo')
-		elif ll == 'I' or ll == 'i':
-			code.append('oo')
-		elif ll == 'J' or ll == 'j':
-			code.append('o---')
-		elif ll == 'K' or ll == 'k':
-			code.append('-o-')
-		elif ll == 'L' or ll == 'l':
-			code.append('o-oo')
-		elif ll == 'M' or ll == 'm':
-			code.append('--')
-		elif ll == 'N' or ll == 'n':
-			code.append('-o')
-		elif ll == 'O' or ll == 'o':
-			code.append('---')
-		elif ll == 'P' or ll == 'p':
-			code.append('o--o')
-		elif ll == 'Q' or ll == 'q':
-			code.append('--o-')
-		elif ll == 'R' or ll == 'r':
-			code.append('o-o')
-		elif ll == 'S' or ll == 's':
-			code.append('ooo')
-		elif ll == 'T' or ll == 't':
-			code.append('-')
-		elif ll == 'U' or ll == 'u':
-			code.append('oo-')
-		elif ll == 'V' or ll == 'v':
-			code.append('ooo-')
-		elif ll == 'W' or ll == 'w':
-			code.append('o--')
-		elif ll == 'X' or ll == 'x':
-			code.append('o--o')
-		elif ll == 'Y' or ll == 'y':
-			code.append('-o--')
-		elif ll == 'Z' or ll == 'z':
-			code.append('--oo')
-		elif ll == '1':
-			code.append('o----')
-		elif ll == '2':
-			code.append('oo---')
-		elif ll == '3':
-			code.append('ooo--')
-		elif ll == '4':
-			code.append('oooo-')
-		elif ll == '5':
-			code.append('ooooo')
-		elif ll == '6':
-			code.append('-oooo')
-		elif ll == '7':
-			code.append('--ooo')
-		elif ll == '8':
-			code.append('---oo')
-		elif ll == '9':
-			code.append('----o')
-		elif ll == '0':
-			code.append('-----')
-		elif ll == ' ':
-			code.append(' ')
-		elif ll == '.':
-			code.append('. ')
-		elif ll == ',':
-			code.append(', ')
-		elif ll == '!':
-		  code.append('! ')
-		elif ll == "'":
-		  code.append("'")
-		elif ll == '?':
-		  code.append('? ')
-	for xx in code: print xx,	
-morse(raw_input("Give me a word, number, or phrase."))
+# Morse Code Translator Updated 10/27/2020 @ 1145
+print("Long = '-'  ,  Short = 'o'")
+print("You can include letters, numbers, and basic punctuation.")
+print(" ")
+list = {'a':'o-', 'b':'-ooo', 'c':'-o-o', 'd':'-oo', 'e':'o', 'f':'oo-o', 'g':'--o', 
+	'h':'oooo', 'i':'oo', 'j':'o---', 'k':'-o-', 'l':'o-oo', 'm':'--', 'n':'-o', 
+	'o':'---', 'p':'o--o', 'q':'--o-', 'r':'o-o', 's':'ooo', 't':'-', 'u':'oo-', 
+	'v':'ooo-', 'w':'o--', 'x':'o--o', 'y':'-o--', 'z':'--oo', 
+	'1':'o----', '2':'oo---', '3':'ooo--', '4':'oooo-', '5':'ooooo', 
+	'6':'-oooo', '7':'--ooo', '8':'---oo', '9':'----o', '0':'-----', 
+	' ':' ', '.':'. ', ',':', ', '!':'! ', "'":"'", '?':'? '}
+
+def morse(code):
+  for letter in code:
+    print(list[letter], end=" ")
+morse(str(input('What do you want to say?')).lower())
