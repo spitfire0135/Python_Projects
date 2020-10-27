@@ -1,4 +1,5 @@
-#TicTacToe Checkerdef isSolved(board):    
+#TicTacToe Checker
+def isSolved(board):    
   if board[0][0] == board[0][1] and board[0][0] == board[0][2]:        
      print True    
   elif board[1][0] == board[1][1] and board[1][0] == board[1][2]:        
