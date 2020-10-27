@@ -1,16 +1,18 @@
 #Phonetic ALphabet Translator
 print("You can include letters, numbers, and basic punctuation.")
 print(" ")
-list = {'a':'Alpha', 'b':'Bravo', 'c':'Charlie', 'd':'Delta', 'e':'Echo', 
-	'f':'Foxtrot', 'g':'Gulf', 'h':'Hotel', 'i':'India', 'j':'Juliet', 
-	'k':'Kilo', 'l':'Lima', 'm':'Mike', 'n':'November', 'o':'Oscar', 
-	'p':'Papa', 'q':'Quebec', 'r':'Romeo', 's':'Sierra', 't':'Tango', 
-	'u':'Uniform', 'v':'Victor', 'w':'Whiskey', 'x':'X-ray', 'y':'Yankee', 
-	'z':'Zulu', '1':'One', '2':'Two', '3':'Tree', '4':'Fower', '5':'Fife', 
-	'6':'Six', '7':'Seven', '8':'Eight', '9':'Niner', '0':'Zero', ' ':' ', 
-	'.':' ~ BREAK ~ ', ',':', ', '!':'! ', "'":"'", '?':'? '}
+list = {'a':'Alpha.', 'b':'Bravo.', 'c':'Charlie.', 'd':'Delta.', 
+	'e':'Echo.', 'f':'Foxtrot.', 'g':'Gulf.', 'h':'Hotel.', 
+	'i':'India.', 'j':'Juliet.', 'k':'Kilo.', 'l':'Lima.', 
+	'm':'Mike.', 'n':'November.', 'o':'Oscar.', 'p':'Papa.', 
+	'q':'Quebec.', 'r':'Romeo.', 's':'Sierra.', 't':'Tango.', 
+	'u':'Uniform.', 'v':'Victor.', 'w':'Whiskey.', 'x':'X-ray.', 
+	'y':'Yankee.', 'z':'Zulu.', '1':'One.', '2':'Two.', '3':'Tree.', 
+	'4':'Fower.', '5':'Fife.', '6':'Six.', '7':'Seven.', '8':'Eight.', 
+	'9':'Niner.', '0':'Zero.', ' ':'-----', '.':' ~ BREAK ~ ', ',':', ', 
+	'!':'! ', "'":"'", '?':'? '}
 
 def phonetic(code):
   for letter in code:
     print(list[letter], end=" ")
-phonetic(str(input('What do you want to say?')).lower())
+phonetic(str(input('What do you want to say? ')).lower())
